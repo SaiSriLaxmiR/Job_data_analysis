@@ -1,12 +1,6 @@
 import pandas as pd
-
-# Load the dataset
 df = pd.read_csv("sample_jobs.csv")
-
-# View top rows
 print(df.head())
-
-# Check for missing values
 print("\nMissing values per column:")
 print(df.isnull().sum())
 df["Salary (USD)"] = df["Salary (USD)"].fillna(df["Salary (USD)"].mean())
